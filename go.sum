@@ -1,0 +1,10 @@
+github.com/JeremyJalpha/MenuBotLib v1.0.3 h1:8CxeyBeUG9ds+c1yAB7CYpDKNY8E4J0PQ0KULRE2Ps8=
+github.com/JeremyJalpha/MenuBotLib v1.0.3/go.mod h1:oCVPI1Ho7AspWuDTCPdTt3S7EKxO1J7D3kfeRNaCG0o=
+github.com/febriliankr/whatsapp-cloud-api v1.0.9 h1:kdLg//AyTe74T3uJAzeb/XmDaMIw4m331oRDuaVRMzo=
+github.com/febriliankr/whatsapp-cloud-api v1.0.9/go.mod h1:EabWmCrUYE3pkPqddIVZOHUXZXDiuCl3OMoJAMQmyqQ=
+github.com/go-chi/chi/v5 v5.1.0 h1:acVI1TYaD+hhedDJ3r54HyA6sExp3HfXq7QWEEY/xMw=
+github.com/go-chi/chi/v5 v5.1.0/go.mod h1:DslCQbL2OYiznFReuXYUmQ2hGd1aDpCnlMNITLSKoi8=
+github.com/joho/godotenv v1.4.0 h1:3l4+N6zfMWnkbPEXKng2o2/MR5mSwTrBih4ZEkkz1lg=
+github.com/joho/godotenv v1.4.0/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
+github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
+github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
