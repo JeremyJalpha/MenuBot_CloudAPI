@@ -26,6 +26,9 @@ import (
 // MERCHANTID=XXXXXXXX
 // MERCHANTKEY=*************
 // PASSPHRASE=*************
+// PHONE_ID=XXXXXXXXXXXXXXX
+// VERIFY_TOKEN=XXXXXX
+// WHATSAPP_TOKEN=XXXXXX
 
 const (
 	isTest              = false
