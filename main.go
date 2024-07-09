@@ -32,7 +32,6 @@ import (
 
 const (
 	isTest              = false
-	appName             = "WhatsAppBot_CloudAPI"
 	webhookURL          = "/webhook"
 	staleMsgTimeOut int = 10
 	pymntRtrnBase       = "payment_return"
