@@ -31,6 +31,10 @@ import (
 // WHATSAPP_TOKEN=XXXXXX
 
 const (
+	catalogueID string = "Pig"
+
+	prclstPreamble = "All fertilizer quoted per gram."
+
 	isTest              = false
 	webhookURL          = "/webhook"
 	staleMsgTimeOut int = 10
@@ -123,9 +127,19 @@ func main() {
 		HostURL:        envVars.PfHost,
 		ItemNamePrefix: ItemNamePrefix,
 	}
+	log.Println("Loading pricelist from DB...")
+	ctlgItms, err := mb.GetCatalogueItemsFromDB(db, catalogueID)
+	if err != nil {
+		log.Fatal("Error reading pricelist from database: ", err)
+	}
+	ctlgSelections := mb.CmpsCtlgSlctnsFromCtlgItms(ctlgItms)
+	prclist := mb.Pricelist{
+		PrlstPreamble: prclstPreamble,
+		Catalogue:     ctlgSelections,
+	}
 
 	// Define routes
-	r.Post(webhookURL, WebhookHandler(envVars.VerifyToken, envVars.HostNumber, staleMsgTimeOut, wa, db, checkoutInfo))
+	r.Post(webhookURL, WebhookHandler(envVars.VerifyToken, envVars.HostNumber, staleMsgTimeOut, wa, db, prclist, checkoutInfo))
 	r.Get(webhookURL, VerificationHandler(envVars.VerifyToken))
 
 	// Define other routes

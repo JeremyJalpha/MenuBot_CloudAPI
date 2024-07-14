@@ -180,7 +180,7 @@ func RespondToUser(wa *wa.Whatsapp, destinationNum, chatMessage string) error {
 }
 
 // WebhookHandler handles the POST /webhook route
-func WebhookHandler(appSecret, hostNumber string, staleMsg int, wa *wa.Whatsapp, db *sql.DB, checkoutUrls mb.CheckoutInfo) http.HandlerFunc {
+func WebhookHandler(appSecret, hostNumber string, staleMsg int, wa *wa.Whatsapp, db *sql.DB, prclst mb.Pricelist, checkoutUrls mb.CheckoutInfo) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var err error
 
@@ -237,7 +237,7 @@ func WebhookHandler(appSecret, hostNumber string, staleMsg int, wa *wa.Whatsapp,
 		}
 
 		if senderNumber != hostNumber && isTest == false {
-			convo := mb.NewConversationContext(db, senderNumber, messageBody, isAutoInc)
+			convo := mb.NewConversationContext(db, senderNumber, messageBody, prclst, isAutoInc)
 			botresp := mb.GetResponseToMsg(convo, db, checkoutUrls, isAutoInc)
 			err := RespondToUser(wa, convo.UserInfo.CellNumber, botresp)
 			if err != nil {
