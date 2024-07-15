@@ -8,6 +8,6 @@ require (
 )
 
 require (
-	github.com/JeremyJalpha/MenuBotLib v1.0.7
+	github.com/JeremyJalpha/MenuBotLib v1.0.8
 	github.com/febriliankr/whatsapp-cloud-api v1.0.9
 )
